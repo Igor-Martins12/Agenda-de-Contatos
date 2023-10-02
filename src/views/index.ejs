@@ -1,40 +1,57 @@
 <%- include('includes/head'); %>
-<%- include('includes/nav'); %>
-<div class="conetiner">
-  <div class="row">
-<div class="col-lg-2"></div>
+  <%- include('includes/nav'); %>
+    <div class="conetiner">
+      <div class="row">
+        <div class="col-lg-2"></div>
 
-<div class="col-lg-8 my-3">
-  <h1 class="text-center">Agenda</h1>
-  <p class="text-center lead"> Seus contatos estão abaixo.</p> 
+        <div class="col-lg-8 my-3">
 
-  <%- include('includes/messages.ejs') %>
-  
-  <% if(contatos.length > 0 ) { %>
-  <div class="responsive-table">
-    <table class="table my-3">
-      <% contatos.forEach(contato => { %>
-        <tr>
-          <td><%= contato.nome %></td>
-          <td><%= contato.sobrenome %></td>
-          <td><%= contato.email %></td>
-          <td><%= contato.telefone %></td>
-          <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
-          <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a></td>
-        </tr>
-        <%  }); %>
-    </table>
-  </div> 
-  <% } else {  %>
-    <p class="text-center lead">Não existem contatos na sua agenda.</p>
-    <% }  %>
+          <%- include('includes/messages.ejs') %>
 
-</div>
+            <nav class="navbar">
+              <a class="navbar-brand"></a>
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </nav>
+            <br>
+            <br>
+            <div class="col-md-4">
+              <article  class="row-cols-1 row-cols-md-3 g-4">
+                <h2>Primeiros post do blog!</h2>
+                <p class="" style="display: flex; text-align: right;" >Olá! Seja bem vinde ao Trendin, seu mais novo portal de novidades de moda.<br>
+                  Aqui, você fica sabendo das novas trends no mundo fashion em primeira mão!<br>
+                </p>
+              </article>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+    <div class=" row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="mx-auto" style="width: 50%; margin: 20px;" >
+          <img src="https://www.wefashiontrends.com/wp-content/uploads/2021/08/bone-tendencia-looks-como-usar-blazer-bege.jpg" class="" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"style="font-size:24px">Dicas para investir nas tendências de moda feminina para 2023 e montar looks incríveis.</h5>
+            <p class="card-text" style="font-size:18px"> Olá! Para o verão de 2023, a Trendin Brasil destaca as seguintes tendências:
+            
+            Utilitária: A moda utilitária está em alta, com peças como saias cargo e casacos multitarefa. Bolsos e zíperes são
+            elementos comuns em roupas de marcas como Fendi, Givenchy e Versace .
+            Conforto casual: O conforto casual é uma das principais tendências do verão de 2023. Roupas como calças jeans, regatas
+            brancas e camisas de flanela são exemplos de peças que se encaixam nessa categoria. 
+          
+            Texturas e brilhos: Para a noite, texturas e brilhos metálicos são tendências que animam as roupas festivas.
+            <br>
+            Espero ter ajudado! Se precisar de mais alguma coisa, é só falar.</p>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+      
+    </div>
 
 
-<div class="col-lg-2"></div>
-</div>
-</div>
-
-
-  <%- include('includes/footer'); %>       
+    <%- include('includes/footer'); %>

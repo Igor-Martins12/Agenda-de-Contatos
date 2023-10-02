@@ -5,8 +5,8 @@
 <div class="col-lg-2"></div>
 
 <div class="col-lg-8 my-3">
-  <h1 class="text-center">Contato</h1>
-  <p class="text-center lead">Crie ou edite o seu contato </p> 
+  <h1 class="text-center">Trendin</h1>
+  <p class="text-center lead">Crie ou edite o seu post </p> 
 
   <%- include('includes/messages.ejs') %>
 
@@ -35,9 +35,15 @@
      </div>
 
      <div class="form-group">
-     <label>Telefone</label>
+     <label>Texto</label>
      <input value="<%= contato.telefone %>" type="tel" class="form-control"  name="telefone">
      </div>
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlFile1"></label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      </div>
+    </form>
 
       <button type="submit" class="btn btn-primary">Salvar</button>
  </form>
